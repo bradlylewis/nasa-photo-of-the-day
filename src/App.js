@@ -4,6 +4,7 @@ import axios from 'axios'
 import Media from './components/Media'
 import Date from './components/Date'
 import Title from './components/Title'
+import Explanation from "./components/Explanation"
 
 
 function App() {
@@ -31,9 +32,8 @@ useEffect(() => {
         </div>
       </div>
       <div className='bottom'>
-
+        <Explanation explanation={nasaData.explanation}/>
       </div>
-      
     </div>
   );
 }
