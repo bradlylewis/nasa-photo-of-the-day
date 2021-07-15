@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
+import Media from './components/Media'
 
 
 function App() {
@@ -18,7 +19,16 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <header>Well</header>
+      <div>
+        
+      </div>
+      <div>
+        <Media url={`${nasaData.url}?rel=0&amp;autoplay=1&mute=1`}/>
+      </div>
+      <div>
+
+      </div>
+      
     </div>
   );
 }
