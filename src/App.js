@@ -21,17 +21,13 @@ useEffect(() => {
 },[])
 
   return (
-    <div className="App container">
+    <div className="App">
       <div className='header'>
         <Title title={nasaData.title}/>
       </div>
-      <div className="top">
-        <Media url={`${nasaData.url}?rel=0&amp;autoplay=1&mute=1`}/>
-        <div>
-          <Date date={nasaData.date}/>
-        </div>
-      </div>
+      <Media url={nasaData.url} mediaType={nasaData.media_type}/>
       <div className='bottom'>
+        <Date date={nasaData.date}/>
         <Explanation explanation={nasaData.explanation}/>
       </div>
     </div>
