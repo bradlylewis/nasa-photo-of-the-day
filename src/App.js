@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
 import Media from './components/Media'
+import Date from './components/Date'
 
 
 function App() {
@@ -18,15 +19,18 @@ useEffect(() => {
 },[])
 
   return (
-    <div className="App">
-      <div>
+    <div className="App container">
+      <div className='header'>
         
       </div>
-      <div>
+      <div className="top">
         <Media url={`${nasaData.url}?rel=0&amp;autoplay=1&mute=1`}/>
+        <div>
+          <Date date={nasaData.date}/>
+        </div>
       </div>
-      <div>
-
+      <div className='bottom'>
+        
       </div>
       
     </div>
