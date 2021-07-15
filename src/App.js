@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios'
 import Media from './components/Media'
 import Date from './components/Date'
+import Title from './components/Title'
 
 
 function App() {
@@ -21,7 +22,7 @@ useEffect(() => {
   return (
     <div className="App container">
       <div className='header'>
-        
+        <Title title={nasaData.title}/>
       </div>
       <div className="top">
         <Media url={`${nasaData.url}?rel=0&amp;autoplay=1&mute=1`}/>
@@ -30,7 +31,7 @@ useEffect(() => {
         </div>
       </div>
       <div className='bottom'>
-        
+
       </div>
       
     </div>
